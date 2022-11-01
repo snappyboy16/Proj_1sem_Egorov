@@ -6,10 +6,18 @@ def func(n):  # функция вычисления суммы числа
     while n > 0:
         summ += n % 10
         n = n // 10
-    return summ  # возвращение суммы
+    return summ  # возврат суммы
 
 
-num = int(input("Введите число: "))  # ввод целого числа
+num = input("Введите число: ")  # ввод целого числа
+
+while type(num) != int: # обработка исключений
+    try:
+        num = int(num)
+    except ValueError:
+        print('Некорректный ввод, попробуйте ещё раз!')
+        num = input("Введите число: ")  # ввод целого числа
+
 k = 0
 while num > 0:  # цикл while, где введённое число > 0
     num -= func(num)
