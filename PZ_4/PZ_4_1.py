@@ -1,8 +1,8 @@
 # Дано целое число N (> 0). Найти сумму N2 + (N + 1)2 + (N + 2)2 + ... + (2N)2
 
-n = input('Введите число N: ')
+n = input('Введите число N: ')  # ввод целого числа
 
-while type(n) != int: # обработчик исключений
+while type(n) != int:  # обработчик исключений
     try:
         n = int(n)
     except ValueError:
@@ -11,7 +11,7 @@ while type(n) != int: # обработчик исключений
 
 x = n ** 2
 i = 0
-while i in range(n): # цикл while с последовательностью до n
+while i in range(n):  # цикл while с последовательностью до n
     i += 1
     x = x + ((n + i) ** 2)
-print(f'Сумма N = {x}')
+print(f'Сумма N = {x}')  # вывод суммы n
